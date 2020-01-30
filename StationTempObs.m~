@@ -113,16 +113,10 @@ anomaly=YEARmean-anomalymean
 
 %% 6a. Plot the annual temperature anomaly over the full observational record
 figure(3)
-scatter(year,anomaly)
-title('Annual Mean Temperature Anomaly')
-xlabel('Year')
-ylabel('Anomaly (F)')
-
+plot(
 %Make a scatter plot with year on the x axis and the annual mean
 %temperature anomaly on the y axis
 % -->  
-
-
 
 %% 6b. Smooth the data by taking a 5-year running mean of the data to plot
 %This will even out some of the variability you observe in the scatter
@@ -130,9 +124,7 @@ ylabel('Anomaly (F)')
 %most straightforward - use the function movmean for this. For information
 %about how to use this function, type "help movmean" in the command window.
 % --> 
-figure(4)
-scott=movmean(anomaly,5)
-plot(year,scott)
+
 %Now add a line with this smoothed data to the scatter plot
 % --> 
 
